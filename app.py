@@ -26,8 +26,8 @@ labels = load_labels()
 # ---------- Optionally download model from Google Drive ----------
 # If you can't put model.pth into the repo (too large), upload it publicly to Drive
 # and set DRIVE_DOWNLOAD = True and fill DRIVE_FILE_ID below.
-DRIVE_DOWNLOAD = False
-DRIVE_FILE_ID = "YOUR_FILE_ID_HERE"  # replace if using Drive
+DRIVE_DOWNLOAD = True
+DRIVE_FILE_ID = "1q0AWtLtHhpAtub7HMHPG50lrkNWw0TEU"  # replace if using Drive
 MODEL_PATH = "model.pth"
 
 if DRIVE_DOWNLOAD and (not os.path.exists(MODEL_PATH)):
@@ -154,3 +154,4 @@ if image is not None:
         st.markdown("#### All class probabilities")
         for i,c in enumerate(labels):
             st.write(f"{c}: {probs[i]*100:.2f}%")
+
