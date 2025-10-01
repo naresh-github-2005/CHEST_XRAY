@@ -28,7 +28,7 @@ labels = load_labels()
 # and set DRIVE_DOWNLOAD = True and fill DRIVE_FILE_ID below.
 DRIVE_DOWNLOAD = True
 DRIVE_FILE_ID = "1q0AWtLtHhpAtub7HMHPG50lrkNWw0TEU"  # replace if using Drive
-MODEL_PATH = "model_best.pth"
+MODEL_PATH = "modl_best.pth"
 
 if DRIVE_DOWNLOAD and (not os.path.exists(MODEL_PATH)):
     try:
@@ -154,5 +154,6 @@ if image is not None:
         st.markdown("#### All class probabilities")
         for i,c in enumerate(labels):
             st.write(f"{c}: {probs[i]*100:.2f}%")
+
 
 
